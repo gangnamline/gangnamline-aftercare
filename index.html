@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GANGNAM LINE CLINIC – Aftercare Guide</title>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&display=swap">
 <style>
 
   :root {
@@ -42,6 +44,39 @@
   .contact-item { background: #f7f7f7; border: 1px solid var(--border); border-radius: 10px; padding: 14px 15px; font-size: 13px; color: var(--mid); line-height: 1.65; }
   .contact-item strong { display: block; color: #111; font-weight: 500; margin-bottom: 3px; }
   .contact-item a { color: inherit; text-decoration: none; }
+
+  /* CJK line-break fix for mobile: Korean keeps phrase-based wrapping, while Chinese/Japanese can wrap naturally within long text. */
+  #content-zh, #content-ja,
+  #content-zh .section, #content-ja .section,
+  #content-zh .care-text, #content-ja .care-text,
+  #content-zh .section-desc, #content-ja .section-desc,
+  #content-zh .contact-item, #content-ja .contact-item,
+  .title-zh, .title-ja, .sub-zh, .sub-ja {
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: loose;
+  }
+
+
+
+  /* Chinese font-weight normalization */
+  #content-zh, .title-zh, .sub-zh, .lang-bar label[for="lang-zh"] {
+    font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', sans-serif;
+    font-synthesis-weight: none;
+  }
+  #content-zh .section h2 { font-weight: 300; }
+  #content-zh .section-title, #content-zh .contact-item strong, #content-zh .care-text strong { font-weight: 500; }
+  #content-zh .care-text b, #content-zh .section-desc b, #content-zh .alert-card b { font-weight: 600; }
+
+  /* Japanese font-weight normalization */
+  #content-ja, .title-ja, .sub-ja {
+    font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    font-synthesis-weight: none;
+  }
+  #content-ja .section h2 { font-weight: 300; }
+  #content-ja .section-title, #content-ja .contact-item strong, #content-ja .care-text strong { font-weight: 500; }
+  #content-ja .care-text b, #content-ja .section-desc b, #content-ja .alert-card b { font-weight: 600; }
+
   @media(max-width:480px) {
     .header { padding: 42px 20px 28px; } .wrap { margin: 28px auto 50px; padding: 0 16px; } .section { padding: 22px 18px; }
     .procedure-bar, .lang-bar { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding: 11px 16px; }
@@ -226,7 +261,7 @@
   <p class="section-desc">시술 후 불편감이 심하거나 증상이 오래 지속되는 경우에는 강남라인한의원으로 문의해주세요.</p>
   <div class="contact-grid">
     <div class="contact-item"><strong>대표전화</strong><a href="tel:025996002">02-599-6002</a></div>
-    <div class="contact-item"><strong>홈페이지</strong><a href="https://www.bfline.co.kr" rel="noopener" target="_blank">www.bfline.co.kr</a></div>
+    <div class="contact-item"><strong>홈페이지</strong><a href="http://www.bfline.co.kr/" rel="noopener" target="_blank">http://www.bfline.co.kr/</a></div>
     <div class="contact-item"><strong>카카오톡</strong><a href="http://pf.kakao.com/_pttSl?from=qr" rel="noopener" target="_blank">카톡으로 문의하기 →</a></div>
     <div class="contact-item"><strong>상담시간</strong>평일 AM 10:00 - PM 8:00<br>토요일 AM 10:00 - PM 3:00<br>일요일은 휴진입니다.</div>
   </div>
@@ -385,7 +420,7 @@
   <p class="section-desc">If discomfort is severe or symptoms last longer than expected after your procedure, please contact Gangnam Line Clinic.</p>
   <div class="contact-grid">
     <div class="contact-item"><strong>Phone</strong><a href="tel:025996002">02-599-6002</a></div>
-    <div class="contact-item"><strong>Website</strong><a href="https://www.bfline.co.kr" rel="noopener" target="_blank">www.bfline.co.kr</a></div>
+    <div class="contact-item"><strong>Website</strong><a href="http://www.bfline.co.kr/" rel="noopener" target="_blank">http://www.bfline.co.kr/</a></div>
     <div class="contact-item"><strong>KakaoTalk</strong><a href="http://pf.kakao.com/_pttSl?from=qr" rel="noopener" target="_blank">Contact us on KakaoTalk →</a></div>
     <div class="contact-item"><strong>Consultation Hours</strong>Weekdays AM 10:00 - PM 8:00<br>Saturday AM 10:00 - PM 3:00<br>Closed on Sundays.</div>
   </div>
@@ -544,7 +579,7 @@
   <p class="section-desc">术后如不适感明显或症状持续时间较长，请联系江南线条韩医院。</p>
   <div class="contact-grid">
     <div class="contact-item"><strong>代表电话</strong><a href="tel:025996002">02-599-6002</a></div>
-    <div class="contact-item"><strong>官网</strong><a href="https://www.bfline.co.kr" rel="noopener" target="_blank">www.bfline.co.kr</a></div>
+    <div class="contact-item"><strong>官网</strong><a href="http://www.bfline.co.kr/" rel="noopener" target="_blank">http://www.bfline.co.kr/</a></div>
     <div class="contact-item"><strong>KakaoTalk</strong><a href="http://pf.kakao.com/_pttSl?from=qr" rel="noopener" target="_blank">通过 KakaoTalk 咨询 →</a></div>
     <div class="contact-item"><strong>咨询时间</strong>平日 AM 10:00 - PM 8:00<br>周六 AM 10:00 - PM 3:00<br>周日休诊。</div>
   </div>
@@ -703,7 +738,7 @@
   <p class="section-desc">施術後の不快感が強い場合や症状が長く続く場合は、江南ライン韓医院までお問い合わせください。</p>
   <div class="contact-grid">
     <div class="contact-item"><strong>代表電話</strong><a href="tel:025996002">02-599-6002</a></div>
-    <div class="contact-item"><strong>ホームページ</strong><a href="https://www.bfline.co.kr" rel="noopener" target="_blank">www.bfline.co.kr</a></div>
+    <div class="contact-item"><strong>ホームページ</strong><a href="http://www.bfline.co.kr/" rel="noopener" target="_blank">http://www.bfline.co.kr/</a></div>
     <div class="contact-item"><strong>KakaoTalk</strong><a href="http://pf.kakao.com/_pttSl?from=qr" rel="noopener" target="_blank">KakaoTalkで問い合わせる →</a></div>
     <div class="contact-item"><strong>相談時間</strong>平日 AM 10:00 - PM 8:00<br>土曜日 AM 10:00 - PM 3:00<br>日曜日は休診です。</div>
   </div>
